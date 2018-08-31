@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cerdas_tangkas_sejarah.cts.Pertanyaan_3">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/textView"
+                android:text="Dimanakah proklamasi dibacakan?\n\n\nJawab :"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentTop="true"
+                android:textStyle="bold"/>
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:id="@+id/radioGroup">
+
+                <RadioButton
+                    android:text="Rumah Ir. Soekarno"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton"
+                    android:onClick="onRadioButton"
+                    android:layout_toLeftOf="@+id/radioGroup"
+                    android:layout_toStartOf="@+id/radioGroup"
+                    android:layout_below="@+id/radioGroup"/>
+
+                <RadioButton
+                    android:text="Rengasdengklok"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:onClick="onRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/radioButton"
+                    android:layout_alignLeft="@+id/radioButton"
+                    android:layout_alignStart="@+id/radioButton"
+                    android:layout_marginTop="26dp"
+                    android:id="@+id/radioButton2"/>
+
+                <RadioButton
+                    android:text="Jl. Pegangsaan"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:onClick="onRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="26dp"
+                    android:id="@+id/radioButton3"
+                    android:layout_below="@+id/radioButton2"
+                    android:layout_alignLeft="@+id/radioButton2"
+                    android:layout_alignStart="@+id/radioButton2"/>
+
+                <RadioButton
+                    android:text="Lapangan Ikada"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:onClick="onRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/radioButton3"
+                    android:layout_alignLeft="@+id/radioButton3"
+                    android:layout_alignStart="@+id/radioButton3"
+                    android:layout_marginTop="26dp"
+                    android:id="@+id/radioButton4"
+                    />
+
+            </RadioGroup>
+            <Button
+                android:id="@+id/btnExplain"
+                android:background="@color/colorPrimary"
+                android:textColor="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/radioGroup"
+                android:text="PENJELASAN"
+                android:onClick="penjelasan"
+                android:layout_marginTop="10dp"
+                />
+            <Button
+                android:id="@+id/btnNext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:textColor="#fff"
+                android:text="SELANJUTNYA"
+                android:onClick="selanjutnya"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/btnExplain"/>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
